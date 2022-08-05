@@ -387,8 +387,9 @@
 
 		.wapper .left-bar-box .left-bar .self-intrduce li {
 			list-style: disc;
-			font-size: 14px;
-			color: #6c6c6c;
+			font-size: 15px;
+			color: #000;
+			font-weight: bold;
 			line-height: 24px;
 			margin-left: 15px;
 		}
@@ -676,6 +677,7 @@
 						<li>对新技术态度激进，敢于尝试</li>
 						<li>善于与上下流沟通,性格随和</li>
 						<li>乐于思考,发现问题解决问题</li>
+						<li>热爱"偷懒"，追求低代码</li>
 					</ul>
 				</li>
 				<li>
@@ -690,7 +692,7 @@
 					<div class="bottom-line" style="width: 40px;"></div>
 					<ul class="skill-others">
 						<li>
-							熟练原生JavaScript（ES6），掌握事件模型、DOM操作、闭包、原型链、继承等相关概念的原理和使用方法。
+							熟练原生JavaScript（ES6），Ts，Vue
 						</li>
 						<li>
 							熟练使用Vue+Vuex及全家桶，了解框架实现原理(阅读过vue在web下分包的源码)，并有三个大型项目的开发经验；掌握React+Redux框架以及全家桶的开发。
@@ -732,7 +734,7 @@
 								<dt><a href="http://www.tongmingmedia.com/"
 										target="_blank">杭州通明文化传媒公司</a><span>前端开发工程师</span></dt>
 								<dd>
-									负责前端开发
+									负责前端开发、公司前端负责人
 								</dd>
 							</dl>
 						</li>
@@ -763,28 +765,45 @@
 							</ul>
 						</li>
 						<li>
-							<h1>检测云管理系统</h1>
+							<h1>内部后台管理系统</h1>
 							<ul class="project-detail">
-								<li><span>项目描述：</span>用于检测机构使用的管理系统(系统分为机构端，企业端，微信端)，后台管理，微信扫码登陆，微信支付等</li>
-								<li><span>担任角色：</span>负责前端开发项目架构，以及一些模块的开发，其中机构端和企业端在pc下使用，微信端在微信下使用做单独开发，使用vux框架开发</li>
-								<li><span>技术栈：</span>ES6、Jade(Pug)、Vue全家桶、canvas、Webpack、ESLint、element-ui</li>
+								<li><span>项目描述：</span>内部使用的后台管理系统，并且同时编写前端文档，主要做出了几点优化
+									<br>
+									在组件上: 编写表格、筛选、面包屑等常用组件
+									<br>
+									在路由上：无需手动引入router组件，将文件夹结构和路由名称相结合，路由结构一目了然
+									<br>
+									在模态框上: 创建全局dialog类，无需在template编写html，而是改为js创建、操作模态框，为每个模态框/内容组件创建识别id，即调即用
+									<br>
+									在模版上: 创建了一系列文件模板，只需命令即可创建模板，不用重复黏贴相同的页面/组件
+									<br>
+									在跳转上: 页面之间的跳转链接不再暴露id
+								
+								</li>
+								<li><span>担任角色：</span>负责管理系统底层开发</li>
+								<li><span>技术栈：</span>ES6、Vue全家桶、canvas、Webpack、ESLint、element-ui</li>
 							</ul>
 						</li>
 						<li>
-							<h1>质量人名片</h1>
+							<h1>路由生成插件(vite)</h1>
 							<ul class="project-detail">
-								<li><span>项目描述：</span>类似名片全能王一样的小程序，用于用户之间交换名片，相互了解</li>
-								<li><span>担任角色：</span>开发该小程序</li>
-								<li><span>技术细节：</span>mpvue、iview</li>
+								<li><span>项目描述：</span>该项目用于辅助开发人员编写vue路由文件
+									项目从文件夹映射路由js文件作为出发点 开发者只需要创建出符合规则的文件结构 就可以为vue-router加入路由 文件作为vite的扩展插件 使用ts编写</li>
+								<li><span>技术细节：</span>ts、 vite</li>
 							</ul>
 						</li>
 						<li>
-							<h1> 中航信行业态势感知可视化平台 </h1>
+							<h1>内部微信小程序</h1>
 							<ul class="project-detail">
-								<li><span>项目描述：</span>3d地图，机场航线展示</li>
-								<li><span>担任角色：</span>负责前端页面的开发，异步组件，IndexedDB本地存储地图资源，使用preload做预加载提高用户体验，
-									使用echarts开发3d地图，3d航线图</li>
-								<li><span>技术细节：</span>ES6、Jade(Pug)、Vue全家桶、nuxt、Webpack、ESLint、element-ui、echarts</li>
+								<li><span>项目描述：</span>优化小程序如下几点
+									<br>
+									使用wxs编写全局工具函数，如图片/时间转化
+									<br>
+									实现类似vuex的全局状态管理
+									<br>
+									编写小程序钩子脚本来实现自动化config
+								</li>
+								<li><span>技术细节：</span>js</li>
 							</ul>
 						</li>
 					</ul>
@@ -807,19 +826,20 @@
 					<div class="bottom-line"></div>
 					<ul class="project">
 						<li>
-							<h1> 仿qq聊天项目 </h1>
+							<h1> 富文本的第二种实现 </h1>
 							<ul class="project-detail">
-								<li><span>项目描述：</span>该项目为自己写的一个项目，仿造了手机qq的实现，前端使用wepack+vue+stylus等，后端使用了express+mongodb实现，项目完成了注册登陆、好友添加聊天、群聊天的功能，
-									我把项目托管在了github上面，聊天使用到了socketio框架作通讯，好友添加聊天能够被及时接受到，前后端由自己一个人实现，聊天终端图片以及文件托管在了七牛云上，并且对聊天图片做了压缩处理
+								<li><span>项目描述：</span>
+									一般来说想让内容可编辑只需要在dom上设置Contenteditable属性即可，而目前我做的工作就是不再
+									使用Contenteditable属性，而是使用Range+隐藏input标签去实现内容的编辑，光标由Cursor类去管理，通过重建Node类将虚拟Node和真实Node建立连接，Node类基本涵盖了原生Node基础属性和方法(insertBefore:Function、previousSibling:Node)，
+									使用js实现CSS换行保证编辑内容时还原CSS的换行
 								</li>
 								<li><span>项目地址: </span> <a
-										href="https://github.com/Jfs007/vue-wechat">https://github.com/Jfs007/vue-wechat</a>
+										href="https://github.com/Jfs007/jf-doc">https://github.com/Jfs007/jf-doc</a>
 								</li>
 							</ul>
 						</li>
+
 						<li>
-
-
 							<h1> vue的computed实现 </h1>
 							<ul class="project-detail">
 								<li><span>项目描述：</span>简单的实现了vue的computed，脏值检查</li>
@@ -860,9 +880,9 @@
 	<script src="./lib/index.js"></script>
 	<!-- <script src="./lib/x.js"></script> -->
 	<script>
-		setTimeout(() => {
-			toPdf()
-		}, 1000)
+		// setTimeout(() => {
+		// 	toPdf()
+		// }, 1000)
 
 
 	</script>
